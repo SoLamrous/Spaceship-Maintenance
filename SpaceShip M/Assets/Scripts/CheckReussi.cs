@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CheckReussi : MonoBehaviour {
 	public GameObject c;
@@ -20,7 +21,8 @@ public class CheckReussi : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag ("Zone")) { 
 			t.text = "Done !";
-
+			SceneManager.LoadScene("CouloirDéplacement");
+			//Application.LoadLevel ("CouloirDéplacement");
 		}
 	}
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Lance.unity
+- path: "Assets/Scenes/CouloirD\xE9placement.unity"
   isLoaded: 1
   isActive: 1

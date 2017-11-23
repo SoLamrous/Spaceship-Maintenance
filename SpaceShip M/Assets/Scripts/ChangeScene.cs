@@ -21,6 +21,7 @@ public class ChangeScene : MonoBehaviour {
 			LeftHand.GetComponent<Deplacement>().changeAction(3);
 			RightHand.GetComponent<Deplacement>().changeAction(3);
 			SceneManager.LoadScene("testLab");
+			//Application.LoadLevel ("testLab");
 		}
 
 	}
