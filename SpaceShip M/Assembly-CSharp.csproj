@@ -53,17 +53,17 @@
   <ItemGroup>
      <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
      <Compile Include="Assets\Scripts\bouncing.cs" />
+     <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\Deplacement.cs" />
+     <Compile Include="Assets\Scripts\FirstPart.cs" />
      <Compile Include="Assets\Scripts\Floating.cs" />
      <Compile Include="Assets\Scripts\FollowEarth.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Rotation.cs" />
      <Compile Include="Assets\Scripts\Saisir.cs" />
+     <Compile Include="Assets\Scripts\SecondPart.cs" />
      <Compile Include="Assets\Scripts\Suivi.cs" />
      <Compile Include="Assets\Scripts\TimeRefresh.cs" />
-     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
-     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />
-     <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleCharacterControl.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

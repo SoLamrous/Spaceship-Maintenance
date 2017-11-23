@@ -11,6 +11,9 @@ public class Deplacement : MonoBehaviour {
 	Vector3 end;
 	Rigidbody rb;
 	bool proj;
+	public bool Droite;
+	string sideString;
+	int action = 3; //Permets de limiter les déplacements à pousser(2) ou tirer(1), les deux (3)
 
 	// Use this for initialization
 	void Start () {
@@ -18,17 +21,22 @@ public class Deplacement : MonoBehaviour {
 		holding= false;
 		rb = cam.GetComponent<Rigidbody> ();
 		proj = false;
+		if (Droite) {
+			sideString = "rightTrigger";
+		} else {
+			sideString = "leftTrigger";
+		}
 		//rb.AddForce ((transform.forward) * 200);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (inzone == true && Input.GetButtonDown ("leftTrigger")) {
+		if (inzone == true && Input.GetButtonDown (sideString)) {
 			start = transform.position;
 			holding = true;
 			Debug.Log ("start");
 		}
-		if (holding && Input.GetButtonUp ("leftTrigger")) {
+		if (holding && Input.GetButtonUp (sideString)) {
 			end = transform.position;
 			holding = false;
 			rb.AddForce ((start-end) * 20);
@@ -38,11 +46,9 @@ public class Deplacement : MonoBehaviour {
 	void OnCollisionEnter(Collision c) {
 
 
-		if (c.gameObject.CompareTag ("wall")) {
+		if (c.gameObject.CompareTag ("wall") && (action == 1 || action==3)) {
 			inzone = true;
 			toGrab = c.gameObject;
-
-
 		}
 	}
 
@@ -60,7 +66,7 @@ public class Deplacement : MonoBehaviour {
 	void OnTriggerEnter(Collider c) {
 
 
-		if (c.gameObject.CompareTag ("wall") && proj==false) {
+		if (c.gameObject.CompareTag ("wall") && proj==false && action > 1) {
 			Debug.Log ("Projection");
 			rb.AddForce (transform.forward * -1 * 2);
 			proj = true;
@@ -69,6 +75,10 @@ public class Deplacement : MonoBehaviour {
 	void OnTriggerExit(Collider c){
 		proj = false;
 
+	}
+
+	public void changeAction(int actionPossible){
+		action = actionPossible;
 	}
 
 }
