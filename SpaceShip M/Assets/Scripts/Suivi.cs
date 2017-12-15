@@ -25,9 +25,9 @@ public class Suivi : MonoBehaviour {
 	void Update () {
 		offset = InputTracking.GetLocalPosition (Side)- InputTracking.GetLocalPosition (VRNode.Head);
 
-		Vector3 h = new Vector3 (t.transform.position.x, t.transform.position.y , t.transform.position.z);
-		transform.position = h +  offset+t.transform.forward*0.25f;
-		transform.rotation = InputTracking.GetLocalRotation (Side);
+		//Vector3 h = new Vector3 (t.transform.position.x, t.transform.position.y , t.transform.position.z);
+		transform.localPosition = InputTracking.GetLocalPosition (Side);
+		transform.localRotation = InputTracking.GetLocalRotation (Side);
 
 	}
 }

@@ -12,8 +12,11 @@ public class Deplacement : MonoBehaviour {
 	Vector3 start;
 	Vector3 end;
 	Rigidbody rb;
+
 	bool proj;
 	public float maxVelocity = 5f;
+	ParticleSystem.EmissionModule emission;
+
 
 	public float mult = 10f;
 
@@ -27,33 +30,37 @@ public class Deplacement : MonoBehaviour {
 		holding= false;
 		rb = cam.GetComponent<Rigidbody> ();
 		proj = false;
+		emission = GetComponentInChildren<ParticleSystem> ().emission;
+
+
+		emission.enabled = false;
 		//rb.AddForce ((transform.forward) * 200);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (rb.velocity.magnitude > maxVelocity) {
 			rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity);
 		}
 		if (Input.GetButton (Side + "Pad")) {
-			if(droite)
-				rb.AddForce (transform.forward  * mult);
+			if (droite)
+				rb.AddForce (transform.forward * mult);
 			else
 				rb.AddForce (transform.forward * -1 * mult);
-			Debug.Log ("propulsion");
+			emission.enabled = true;
+		} else {
+			if(emission.enabled) emission.enabled = false;
+			if (inzone == true && Input.GetButtonDown (Side + "Trigger")) {
+				start = transform.position;
+				holding = true;
+				Debug.Log ("start");
+			}
+			if (holding && Input.GetButtonUp (Side + "Trigger")) {
+				end = transform.position;
+				holding = false;
+				rb.AddForce ((start - end) * 20);
+			}
 		}
-		if (inzone == true && Input.GetButtonDown (Side + "Trigger")) {
-			start = transform.position;
-			holding = true;
-			Debug.Log ("start");
-		}
-		if (holding && Input.GetButtonUp (Side + "Trigger")) {
-			end = transform.position;
-			holding = false;
-			rb.AddForce ((start-end) * 20);
-		}
-		
 	}
 	void OnCollisionEnter(Collision c) {
 

@@ -5,54 +5,72 @@ using UnityEngine.VR;
 
 public class Saisir : MonoBehaviour {
 	bool inzone, holding;
+
+	HashSet<InteractableItem> objectsHoveringOver = new HashSet<InteractableItem>();
+
+	private InteractableItem closestItem;
+	private InteractableItem interactingItem;
+
 	GameObject toGrab;
 	Vector3 offset = new Vector3(0,0,0);
 	Rigidbody rb;
+	string Side;
+	public bool droite=false;
 	// Use this for initialization
 	void Start () {
+		if (droite)
+			Side = "rightTrigger";
+		else
+			Side = "leftTrigger";
 		inzone = false;
 		holding= false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		if (Input.GetButtonDown(Side)) {
+			Debug.Log ("down");
+			float minDistance = float.MaxValue;
 
-		if(inzone ==true  && Input.GetButtonDown("leftTrigger")){
-			if (offset.x == 0 && offset.y == 0 && offset.z == 0) {
-				offset = toGrab.transform.position - transform.position;
-				holding = true;
-			}
-		}
-		if(holding)
-			toGrab.transform.position = transform.position + offset ;
-		if(holding && Input.GetButtonUp("leftTrigger")) {
-			holding = false;
-			offset = new Vector3 (0, 0, 0);
+            float distance;
+            foreach (InteractableItem item in objectsHoveringOver) {
+                distance = (item.transform.position - transform.position).sqrMagnitude;
 
-			rb.AddForce (transform.forward * 200);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestItem = item;
+                }
+            }
 
-			rb = null;
-		}
-		
+            interactingItem = closestItem;
+
+            if (interactingItem) {
+                if (interactingItem.IsInteracting()) {
+                    interactingItem.EndInteraction(gameObject);
+                }
+
+                interactingItem.BeginInteraction(gameObject);
+            }
+        }
+
+		if (Input.GetButtonUp(Side) && interactingItem != null) {
+            interactingItem.EndInteraction(gameObject);
+        }
 	}
+	private void OnTriggerEnter(Collider collider) {
+		Debug.Log ("trigger enter");
+        InteractableItem collidedItem = collider.GetComponent<InteractableItem>();
+        if (collidedItem) {
+            objectsHoveringOver.Add(collidedItem);
+        }
+    }
 
-	void OnCollisionEnter(Collision c) {
-
-
-		if (c.gameObject.CompareTag ("Object")) {
-			inzone = true;
-			toGrab = c.gameObject;
-			rb = toGrab.GetComponent<Rigidbody> ();
-		}
-	}
-
-	void OnCollisionExit(Collision c){
-		if (toGrab == c.gameObject) {
-			inzone = false;
-			toGrab = null;
-
-		}
-
-			
-	}
+    private void OnTriggerExit(Collider collider) {
+        InteractableItem collidedItem = collider.GetComponent<InteractableItem>();
+        if (collidedItem) {
+            objectsHoveringOver.Remove(collidedItem);
+        }
+    }
 }
+

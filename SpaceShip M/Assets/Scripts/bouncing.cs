@@ -15,7 +15,9 @@ public class bouncing : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision c){
-		ContactPoint contact = c.contacts [0];
-		rb.AddForce (contact.normal*0.001f);
+		if (c.gameObject.CompareTag ("wall")) {
+			ContactPoint contact = c.contacts [0];
+			rb.AddForce (contact.normal * 0.001f);
+		}
 	}
 }

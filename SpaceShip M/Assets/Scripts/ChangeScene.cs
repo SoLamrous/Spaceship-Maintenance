@@ -18,9 +18,9 @@ public class ChangeScene : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c) {
 		if(c.gameObject.CompareTag("Hand")) {
-			LeftHand.GetComponent<Deplacement>().changeAction(3);
+			/*LeftHand.GetComponent<Deplacement>().changeAction(3);
 			RightHand.GetComponent<Deplacement>().changeAction(3);
-			SceneManager.LoadScene("testLab");
+			*/SceneManager.LoadScene("testLab");
 			//Application.LoadLevel ("testLab");
 		}
 

@@ -3,7 +3,7 @@ guid: a03b7cf0badc21e469b27b1f279e08cb
 timeCreated: 1508433224
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: Airlock_Int_CrewLock_Simp_Door
     100002: Airlock_Int_Enclosure
@@ -914,8 +914,8 @@ ModelImporter:
     13700000: Node3_Int_Rack.COLBERT
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 2
+    materialSearch: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -934,7 +934,6 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -942,10 +941,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -961,7 +957,6 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

@@ -21,8 +21,8 @@ public class FirstPart : MonoBehaviour {
 	void OnTriggerEnter(Collider c){
 		if (!c.gameObject.CompareTag ("wall")) {
 			anim.SetTrigger("DebutMouvement");
-			LeftHand.GetComponent<Deplacement>().changeAction(2);
-			RightHand.GetComponent<Deplacement>().changeAction(2);
+			//LeftHand.GetComponent<Deplacement>().changeAction(2);
+			//RightHand.GetComponent<Deplacement>().changeAction(2);
 		}
 	}
 }

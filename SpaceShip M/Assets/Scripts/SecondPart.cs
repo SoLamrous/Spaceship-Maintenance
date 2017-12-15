@@ -21,8 +21,8 @@ public class SecondPart : MonoBehaviour {
 	void OnTriggerEnter (Collider c){
 		if (!c.gameObject.CompareTag ("wall")) {
 			indication.text = "Avancez jusqu'au bouton en attrapant et tirant les poignets et appuyez dessus";
-			LeftHand.GetComponent<Deplacement>().changeAction(1);
-			RightHand.GetComponent<Deplacement>().changeAction(1);
+			//LeftHand.GetComponent<Deplacement>().changeAction(1);
+			//RightHand.GetComponent<Deplacement>().changeAction(1);
 		}
 	}
 }
