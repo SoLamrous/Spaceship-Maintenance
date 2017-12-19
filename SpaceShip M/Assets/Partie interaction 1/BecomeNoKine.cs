@@ -14,12 +14,14 @@ public class BecomeNoKine : MonoBehaviour {
 	bool b2=false;
 	bool b3=false;
 	bool b4=false;
+
 	Rigidbody rb;
 	InteractableItem inter;
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody> ();
 		inter = gameObject.GetComponent<InteractableItem> ();
+
 	}
 	
 	// Update is called once per frame
@@ -40,6 +42,7 @@ public class BecomeNoKine : MonoBehaviour {
 			rb.isKinematic = false;
 			inter.enabled = true;
 			t.text = "Souder les deux bout de fils entre eux pour remettre le courant dans le module de stockage";
+
 		}
 		
 	}

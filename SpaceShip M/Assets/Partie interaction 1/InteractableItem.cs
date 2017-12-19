@@ -13,7 +13,7 @@ public class InteractableItem : MonoBehaviour {
 	private Quaternion rotationDelta;
 	private float angle;
 	private Vector3 axis;
-
+	public bool right;
 	private GameObject attachedWand;
 
 	private Transform interactionPoint;
