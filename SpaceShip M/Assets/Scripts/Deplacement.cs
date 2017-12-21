@@ -40,7 +40,10 @@ public class Deplacement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (rb.velocity.magnitude > maxVelocity) {
-			rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity);
+			if(Input.GetButton (Side + "Trigger"))
+				rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity/10f);
+			else
+				rb.velocity = Vector3.ClampMagnitude (rb.velocity, maxVelocity);
 		}
 		if (Input.GetButton (Side + "Pad")) {
 			if (droite)
