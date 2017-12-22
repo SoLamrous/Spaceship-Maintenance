@@ -1,28 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class FirstPart : MonoBehaviour {
-	public GameObject text;
-	Animator anim;
-	public GameObject LeftHand;
-	public GameObject RightHand;
-	// Use this for initialization
-	void Start () {
-		anim = text.GetComponent<Animator> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	void OnTriggerEnter(Collider c){
-		if (!c.gameObject.CompareTag ("wall")) {
-			anim.SetTrigger("DebutMouvement");
-			//LeftHand.GetComponent<Deplacement>().changeAction(2);
-			//RightHand.GetComponent<Deplacement>().changeAction(2);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee1317d1450791350db2670d68c6e4f140ce919a22815e10732a5ee989400e9d
+size 673

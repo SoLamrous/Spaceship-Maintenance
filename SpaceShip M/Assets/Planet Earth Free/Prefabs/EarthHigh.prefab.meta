@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: 27fe6d2a15a377f4587f716a2d37ca8a
-labels:
-- Earth
-- Planet
-- Solar
-- Space
-- Scifi
-- Atmosphere
-timeCreated: 1454203462
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:7446bc8f44ead62e8ba98e1ced9e51c319e9e8338e4a74d502aa326030c81af1
+size 258

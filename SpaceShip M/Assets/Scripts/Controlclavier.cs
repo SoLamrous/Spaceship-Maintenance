@@ -1,15 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Controlclavier : MonoBehaviour {
-	
-	void Update()
-	{
-		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-		var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-
-		transform.Rotate(0, x, 0);
-		transform.Translate(0, 0, z);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c14420bcf22d298bf4f753299a813c1cebc9d3bb3e367bfe83330f98b2477a8
+size 355

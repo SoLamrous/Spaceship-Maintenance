@@ -1,18 +1,3 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Deplacement.cs">
-    <Files>
-      <File FileName="Assets\Scripts\SecondPart.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ChangeScene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FirstPart.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Suivi.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Deplacement.cs" Line="44" Column="70" />
-      <File FileName="Assets\Scripts\Floating.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\bouncing.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-</Properties>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc989cc4c465fc83692e54037e0300fb5be3a978de4f34cec8c46154b6b57ecd
+size 1026

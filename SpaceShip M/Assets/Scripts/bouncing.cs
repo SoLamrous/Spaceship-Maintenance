@@ -1,23 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class bouncing : MonoBehaviour {
-	Rigidbody rb;
-	// Use this for initialization
-	void Start () {
-		rb = GetComponent<Rigidbody> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	void OnCollisionEnter (Collision c){
-		if (c.gameObject.CompareTag ("wall")) {
-			ContactPoint contact = c.contacts [0];
-			rb.AddForce (contact.normal * 0.001f);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53ed572fee2fa350e140e9826b5a03b19fdfefb1394468f043ce6f050883f17e
+size 484

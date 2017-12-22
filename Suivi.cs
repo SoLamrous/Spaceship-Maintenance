@@ -1,33 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.VR;
-
-public class Suivi : MonoBehaviour {
-	public GameObject t;
-	Vector3 offset;
-	Transform transform;
-	public bool droite;
-	VRNode Side;
-	// Use this for initialization
-	void Start () {
-		transform = GetComponent<Transform> ();
-		if (droite)
-			Side = VRNode.RightHand;
-		else
-			Side = VRNode.LeftHand;
-			offset = InputTracking.GetLocalPosition (Side)- InputTracking.GetLocalPosition (VRNode.Head);
-
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		offset = InputTracking.GetLocalPosition (Side)- InputTracking.GetLocalPosition (VRNode.Head);
-
-		Vector3 h = new Vector3 (t.transform.position.x, t.transform.position.y , t.transform.position.z);
-		transform.position = h +  offset+t.transform.forward*0.25f;
-		transform.rotation = InputTracking.GetLocalRotation (Side);
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:33b10011a50ffd2463f777810dc165f61de19d26c99367872cc0b174083011cb
+size 893

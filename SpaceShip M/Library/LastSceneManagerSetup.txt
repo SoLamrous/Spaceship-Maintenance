@@ -1,4 +1,3 @@
-sceneSetups:
-- path: Assets/Scenes/testStation.unity
-  isLoaded: 1
-  isActive: 1
+version https://git-lfs.github.com/spec/v1
+oid sha256:a97b89f05d02c0c6bc7bef1c935744b92677371b2b9e9217a08ccb858e8e2174
+size 81

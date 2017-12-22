@@ -1,35 +1,3 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShip M", "Assembly-CSharp-firstpass.csproj", "{FEFC9D16-A10B-34B2-57A5-EFAE203E5C4B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShip M", "Assembly-CSharp.csproj", "{1E6BF808-5548-67D9-917A-3F1BB079BC87}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShip M", "Assembly-CSharp-Editor-firstpass.csproj", "{6A47C360-9DA0-7F69-AD21-A1D63087676B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FEFC9D16-A10B-34B2-57A5-EFAE203E5C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEFC9D16-A10B-34B2-57A5-EFAE203E5C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEFC9D16-A10B-34B2-57A5-EFAE203E5C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEFC9D16-A10B-34B2-57A5-EFAE203E5C4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E6BF808-5548-67D9-917A-3F1BB079BC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E6BF808-5548-67D9-917A-3F1BB079BC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E6BF808-5548-67D9-917A-3F1BB079BC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E6BF808-5548-67D9-917A-3F1BB079BC87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A47C360-9DA0-7F69-AD21-A1D63087676B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A47C360-9DA0-7F69-AD21-A1D63087676B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A47C360-9DA0-7F69-AD21-A1D63087676B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A47C360-9DA0-7F69-AD21-A1D63087676B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-	EndGlobalSection
-EndGlobal
+version https://git-lfs.github.com/spec/v1
+oid sha256:163b5410def4fa0025f2d2842239c8f8f94088f6b0aae94968354742d7d4c23f
+size 2012

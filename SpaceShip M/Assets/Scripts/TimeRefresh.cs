@@ -1,17 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class TimeRefresh : MonoBehaviour {
-	Text t;
-	// Use this for initialization
-	void Start () {
-		t = GetComponent<Text> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		t.text = System.DateTime.Now.ToLongTimeString() + " " + System.DateTime.Now.ToLongDateString();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9110cff5593b9b574b9bd3671de033d8abf31431ff4eaf8d2283d118d5156472
+size 414

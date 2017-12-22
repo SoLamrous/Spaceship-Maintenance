@@ -1,28 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class SecondPart : MonoBehaviour {
-	Text indication;
-	public GameObject textObject;
-	public GameObject LeftHand;
-	public GameObject RightHand;
-	// Use this for initialization
-	void Start () {
-		indication = textObject.GetComponent<Text> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	void OnTriggerEnter (Collider c){
-		if (!c.gameObject.CompareTag ("wall")) {
-			indication.text = "Avancez jusqu'au bouton en attrapant et tirant les poignets et appuyez dessus";
-			//LeftHand.GetComponent<Deplacement>().changeAction(1);
-			//RightHand.GetComponent<Deplacement>().changeAction(1);
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4eed7885077b009b7dc130984a628b9a84e66455c4700f6c8e527c683bf3d8c4
+size 755

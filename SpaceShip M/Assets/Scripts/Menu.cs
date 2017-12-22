@@ -1,22 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class Menu : MonoBehaviour {
-
-	public void LoadSceneInteraction()
-	{
-		SceneManager.LoadScene("testInteraction");
-	}
-
-	public void LoadSceneStation()
-	{
-		SceneManager.LoadScene("testStation");
-	}
-
-	public void LoadSceneLab()
-	{
-		SceneManager.LoadScene("testLab");
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfcc40d40b784bd50c16e7d45e9cad15c091f7986231031ea6b178246e5f2e3e
+size 418
